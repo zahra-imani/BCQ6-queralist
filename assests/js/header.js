@@ -1,3 +1,4 @@
+header.innerHTML =`
 <header id="header">
     <div class="nav__right" id="navbar">
       <nav class="nav__list">
@@ -158,3 +159,4 @@
       </div>
     </div>
   </header>
+  `

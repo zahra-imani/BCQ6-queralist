@@ -1,0 +1,30 @@
+#aboutUs{
+    margin: 0 auto;
+    max-width: $screen-md;
+    display: flex;
+    justify-content:  space-evenly;
+    align-items: flex-start;
+background: $on-primary-light;
+border: 1px solid #F5F6F8;
+box-shadow: 0px 4px 63px rgba(0, 0, 0, 0.03);
+border-radius: 24px;
+.right__panel{
+display: block;
+}
+.left__panel{
+    max-width: 400px;
+   
+     
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+    .input__name{
+        input{
+            width: 45px;
+        }}
+    }
+    
+}
+}
