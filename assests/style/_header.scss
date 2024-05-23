@@ -1,5 +1,5 @@
 #header {
-  @include container;
+  @include fluidcontainer;
   margin-top: 1rem ;
   margin-bottom: 1rem ;
 
@@ -43,7 +43,7 @@
       background-color: $primery-color;
       border: 1px solid $primery-color;
       border-radius: 5px;
-      padding: .75rem 2rem;
+      padding: 0.5rem 2rem;
       &:hover {
         background-color: $on-primary-light;
         border: 1px solid $primery-color;
@@ -64,7 +64,7 @@
         background-color: $on-primary-light;
         border: 1px solid $neutralAshGray;
         border-radius: 5px;
-        padding: 6px;
+        padding: 10px 10px 0 8px;
         cursor: pointer;
       }
       &-content {

@@ -1,40 +1,36 @@
 #footer {
-  @include container;
+  @include fluidcontainer;
   padding: 0.5rem 0;
   h3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 31px;
-    margin-bottom: 1.5rem;
-    color: $on-background-light;
+  
     .hrlines {
       position: relative;
       max-width: 500px;
       margin: 100px auto;
       text-align: center;
       &:before {
-        content: " ";
+        content: "";
         display: block;
-        height: 2px;
-        width: 130px;
+        width: 2px;
+        background-color: black;
+        height: 100%;
         position: absolute;
-
         left: 0;
-        background: red;
+        top: 0;
       }
       &:after {
-        content: " ";
-        height: 2px;
-        width: 130px;
-        background: red;
+        content: "";
         display: block;
+        width: 2px;
+        background-color: black;
+        height: 100%;
         position: absolute;
-
         right: 0;
+        top: 0;
       }
-    }
+    
   }
+}
   .footer__widget {
     display: flex;
     justify-content: space-around;
@@ -43,6 +39,7 @@
     .widget__right {
       display: flex;
       flex-direction: column;
+      width: 40%;
 
       span {
         font-size: 16px;
@@ -51,6 +48,7 @@
       }
     }
     .widget__left {
+      width: 40%;
       h4 {
         padding-bottom: 0.75rem;
       }
@@ -90,6 +88,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-top: 2rem;
       color: $on-background-light;
       font-size: 16px;
     }

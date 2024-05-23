@@ -1,30 +1,98 @@
-#aboutUs{
-    margin: 0 auto;
-    max-width: $screen-md;
+#aboutUs {
+  @include container;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 32px;
+  background: $on-primary-light;
+  border: 1px solid #f5f6f8;
+  box-shadow: 0px 0px 30px 6px rgba(0, 0, 0, 0.03);
+  border-radius: 24px;
+  padding: 2vw;
+  .right__panel {
+    border-left: 1px solid $neutralAshGray;
     display: flex;
-    justify-content:  space-evenly;
-    align-items: flex-start;
-background: $on-primary-light;
-border: 1px solid #F5F6F8;
-box-shadow: 0px 4px 63px rgba(0, 0, 0, 0.03);
-border-radius: 24px;
-.right__panel{
-display: block;
-}
-.left__panel{
-    max-width: 400px;
-   
-     
-        form{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-    .input__name{
-        input{
-            width: 45px;
-        }}
+    flex-direction: column;
+    justify-content: space-between;
+    .panel__text{
+       
+    h2 {
+      font-size: 40px;
+      color: $on-background-light;
     }
-    
+    p {
+        padding-top: 1.5rem;
+      font-size: 18px;
+      color: $neutralGray;
+    }
+    .call__info{
+        margin-top: 3rem;
+        a{ 
+            display: flex;
+            gap: 10px;
+            padding-bottom: 2rem;
+            font-size: 18px;
+            font-weight: bold;
+            color: $on-background-light;
+
+        }
+        
+    }
 }
+.panel__icon{
+    a{
+    padding: .5rem;
+    }
+}
+  }
+  .left__panel {
+.name__wrapper ,.email__wrapper, .phone__wrapper, .message__wrapper{
+    margin-bottom: 1rem;
+
+    label {
+        font-size: 16px;
+      }
+    input,
+    textarea {
+      width: 100%;
+       margin-top: 10px;
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid $neutralAshGray;
+      ::placeholder {
+        font-family: YekanBakh;
+        font-size:70px;
+        color: $neutralAshGray;
+      }
+
+    }
+}
+
+    .name__wrapper {
+      display: flex;
+      flex-direction: row;
+justify-content: space-between;
+
+    }
+  
+    .button{
+        width: 100%;
+        cursor: pointer;
+        background-color: $primery-color;
+        border-radius: 0.25rem;
+        border: 1px solid $primery-color;
+        color: #fff;
+        font-size: 15px;
+        line-height: 45px;
+        text-align: center;
+        :hover {
+            background-color: $primary-hover-light;  
+            border-color: $primary-hover-light;
+        } 
+    
+    }
+  }
+
 }

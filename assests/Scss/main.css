@@ -48,7 +48,7 @@ a {
 
 #header {
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 1200px;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -87,7 +87,7 @@ a {
   background-color: #2C7EF8;
   border: 1px solid #2C7EF8;
   border-radius: 5px;
-  padding: 0.75rem 2rem;
+  padding: 0.5rem 2rem;
 }
 #header .nav__left .nav__btn:hover {
   background-color: #FFFFFF;
@@ -108,7 +108,7 @@ a {
   background-color: #FFFFFF;
   border: 1px solid #C8C7CB;
   border-radius: 5px;
-  padding: 6px;
+  padding: 10px 10px 0 8px;
   cursor: pointer;
 }
 #header .nav__left .nav__dropdown-content {
@@ -140,43 +140,104 @@ main {
 
 #aboutUs {
   margin: 0 auto;
-  max-width: 768px;
+  max-width: 1024px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 32px;
   background: #FFFFFF;
-  border: 1px solid #F5F6F8;
-  box-shadow: 0px 4px 63px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f5f6f8;
+  box-shadow: 0px 0px 30px 6px rgba(0, 0, 0, 0.03);
   border-radius: 24px;
+  padding: 2vw;
 }
 #aboutUs .right__panel {
-  display: block;
-}
-#aboutUs .left__panel {
-  max-width: 400px;
-}
-#aboutUs .left__panel form {
+  border-left: 1px solid #C8C7CB;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
 }
-#aboutUs .left__panel form .input__name input {
-  width: 45px;
+#aboutUs .right__panel .panel__text h2 {
+  font-size: 40px;
+  color: #191C1E;
+}
+#aboutUs .right__panel .panel__text p {
+  padding-top: 1.5rem;
+  font-size: 18px;
+  color: #646466;
+}
+#aboutUs .right__panel .panel__text .call__info {
+  margin-top: 3rem;
+}
+#aboutUs .right__panel .panel__text .call__info a {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 2rem;
+  font-size: 18px;
+  font-weight: bold;
+  color: #191C1E;
+}
+#aboutUs .right__panel .panel__icon a {
+  padding: 0.5rem;
+}
+#aboutUs .left__panel .name__wrapper, #aboutUs .left__panel .email__wrapper, #aboutUs .left__panel .phone__wrapper, #aboutUs .left__panel .message__wrapper {
+  margin-bottom: 1rem;
+}
+#aboutUs .left__panel .name__wrapper label, #aboutUs .left__panel .email__wrapper label, #aboutUs .left__panel .phone__wrapper label, #aboutUs .left__panel .message__wrapper label {
+  font-size: 16px;
+}
+#aboutUs .left__panel .name__wrapper input,
+#aboutUs .left__panel .name__wrapper textarea, #aboutUs .left__panel .email__wrapper input,
+#aboutUs .left__panel .email__wrapper textarea, #aboutUs .left__panel .phone__wrapper input,
+#aboutUs .left__panel .phone__wrapper textarea, #aboutUs .left__panel .message__wrapper input,
+#aboutUs .left__panel .message__wrapper textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #C8C7CB;
+}
+#aboutUs .left__panel .name__wrapper input ::-moz-placeholder, #aboutUs .left__panel .name__wrapper textarea ::-moz-placeholder, #aboutUs .left__panel .email__wrapper input ::-moz-placeholder, #aboutUs .left__panel .email__wrapper textarea ::-moz-placeholder, #aboutUs .left__panel .phone__wrapper input ::-moz-placeholder, #aboutUs .left__panel .phone__wrapper textarea ::-moz-placeholder, #aboutUs .left__panel .message__wrapper input ::-moz-placeholder, #aboutUs .left__panel .message__wrapper textarea ::-moz-placeholder {
+  font-family: YekanBakh;
+  font-size: 70px;
+  color: #C8C7CB;
+}
+#aboutUs .left__panel .name__wrapper input ::placeholder,
+#aboutUs .left__panel .name__wrapper textarea ::placeholder, #aboutUs .left__panel .email__wrapper input ::placeholder,
+#aboutUs .left__panel .email__wrapper textarea ::placeholder, #aboutUs .left__panel .phone__wrapper input ::placeholder,
+#aboutUs .left__panel .phone__wrapper textarea ::placeholder, #aboutUs .left__panel .message__wrapper input ::placeholder,
+#aboutUs .left__panel .message__wrapper textarea ::placeholder {
+  font-family: YekanBakh;
+  font-size: 70px;
+  color: #C8C7CB;
+}
+#aboutUs .left__panel .name__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#aboutUs .left__panel .button {
+  width: 100%;
+  cursor: pointer;
+  background-color: #2C7EF8;
+  border-radius: 0.25rem;
+  border: 1px solid #2C7EF8;
+  color: #fff;
+  font-size: 15px;
+  line-height: 45px;
+  text-align: center;
+}
+#aboutUs .left__panel .button :hover {
+  background-color: #075CD9;
+  border-color: #075CD9;
 }
 
 #footer {
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 1200px;
   padding: 0.5rem 0;
-}
-#footer h3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 31px;
-  margin-bottom: 1.5rem;
-  color: #191C1E;
 }
 #footer h3 .hrlines {
   position: relative;
@@ -185,22 +246,24 @@ main {
   text-align: center;
 }
 #footer h3 .hrlines:before {
-  content: " ";
+  content: "";
   display: block;
-  height: 2px;
-  width: 130px;
+  width: 2px;
+  background-color: black;
+  height: 100%;
   position: absolute;
   left: 0;
-  background: red;
+  top: 0;
 }
 #footer h3 .hrlines:after {
-  content: " ";
-  height: 2px;
-  width: 130px;
-  background: red;
+  content: "";
   display: block;
+  width: 2px;
+  background-color: black;
+  height: 100%;
   position: absolute;
   right: 0;
+  top: 0;
 }
 #footer .footer__widget {
   display: flex;
@@ -211,11 +274,15 @@ main {
 #footer .footer__widget .widget__right {
   display: flex;
   flex-direction: column;
+  width: 40%;
 }
 #footer .footer__widget .widget__right span {
   font-size: 16px;
   color: #323233;
   padding-bottom: 1rem;
+}
+#footer .footer__widget .widget__left {
+  width: 40%;
 }
 #footer .footer__widget .widget__left h4 {
   padding-bottom: 0.75rem;
@@ -251,6 +318,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
   color: #191C1E;
   font-size: 16px;
 }/*# sourceMappingURL=main.css.map */
