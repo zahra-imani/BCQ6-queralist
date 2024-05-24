@@ -1,98 +1,216 @@
 #aboutUs {
   @include container;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 4rem 0 4rem 0;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   gap: 32px;
-  background: $on-primary-light;
-  border: 1px solid #f5f6f8;
-  box-shadow: 0px 0px 30px 6px rgba(0, 0, 0, 0.03);
-  border-radius: 24px;
+  background: $background;
+  @include shadow;
   padding: 2vw;
   .right__panel {
     border-left: 1px solid $neutralAshGray;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    .panel__text{
-       
-    h2 {
-      font-size: 40px;
-      color: $on-background-light;
-    }
-    p {
+    .panel__text {
+      h2 {
+        font-size: 40px;
+        color: $secondary;
+      }
+      p {
         padding-top: 1.5rem;
-      font-size: 18px;
-      color: $neutralGray;
-    }
-    .call__info{
+        font-size: 18px;
+        color: $neutralGray;
+      }
+      .call__info {
         margin-top: 3rem;
-        a{ 
-            display: flex;
-            gap: 10px;
-            padding-bottom: 2rem;
-            font-size: 18px;
-            font-weight: bold;
-            color: $on-background-light;
-
+        a {
+          display: flex;
+          gap: 10px;
+          padding-bottom: 2rem;
+          font-size: 18px;
+          font-weight: bold;
+          color: $secondary;
         }
-        
+      }
     }
-}
-.panel__icon{
-    a{
-    padding: .5rem;
+    .panel__icon {
+      a {
+        padding: 0.5rem;
+      }
     }
-}
   }
   .left__panel {
-.name__wrapper ,.email__wrapper, .phone__wrapper, .message__wrapper{
-    margin-bottom: 1rem;
+    .name__wrapper,
+    .email__wrapper,
+    .phone__wrapper,
+    .message__wrapper {
+      margin-bottom: 1rem;
 
-    label {
+      label {
         font-size: 16px;
       }
-    input,
-    textarea {
-      width: 100%;
-       margin-top: 10px;
-      padding: 15px;
-      border-radius: 5px;
-      border: 1px solid $neutralAshGray;
-      ::placeholder {
-        font-family: YekanBakh;
-        font-size:70px;
-        color: $neutralAshGray;
+      input,
+      textarea {
+        width: 100%;
+        margin-top: 10px;
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid $neutralAshGray;
+        ::placeholder {
+          font-family: YekanBakh;
+          font-size: 70px;
+          color: $neutralAshGray;
+        }
       }
-
     }
-}
 
     .name__wrapper {
       display: flex;
       flex-direction: row;
-justify-content: space-between;
-
+      justify-content: space-between;
     }
-  
-    .button{
+
+    .button {
+      width: 100%;
+      cursor: pointer;
+      background-color: $primery;
+      border-radius: 0.25rem;
+      border: 1px solid $primery;
+      color: #fff;
+      font-size: 15px;
+      line-height: 45px;
+      text-align: center;
+      :hover {
+        background-color: $primery-hover;
+        border-color: $primery-hover;
+      }
+    }
+  }
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+}
+
+#mAboutUs {
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+  .mAboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+    h2,
+    p {
+      text-align: center;
+    }
+    p {
+      font-size: 14px;
+    }
+    form {
+      @include shadow;
+      padding: 1rem;
+      .name__wrapper,
+      .email__wrapper,
+      .phone__wrapper,
+      .message__wrapper {
+        margin-bottom: 0.5rem;
+
+        label {
+          font-size: 12px;
+        }
+        input,
+        textarea {
+          width: 100%;
+          margin-top: 5px;
+          padding: 0.5rem;
+          border-radius: 5px;
+          border: 1px solid $neutralAshGray;
+          ::placeholder {
+            font-family: YekanBakh;
+            font-size: 7px;
+            color: $neutralAshGray;
+          }
+        }
+      }
+
+      .name__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 5px;
+      }
+
+      .button {
         width: 100%;
         cursor: pointer;
-        background-color: $primery-color;
+        background-color: $primery;
         border-radius: 0.25rem;
-        border: 1px solid $primery-color;
+        border: 1px solid $primery;
         color: #fff;
         font-size: 15px;
         line-height: 45px;
         text-align: center;
         :hover {
-            background-color: $primary-hover-light;  
-            border-color: $primary-hover-light;
-        } 
-    
+          background-color: $primery-hover;
+          border-color: $primery-hover;
+        }
+      }
     }
-  }
+    .about__info{
+    display: flex;
+    justify-content: space-evenly;
+gap: 8px;
 
+      &--call , &--email {
+        @include shadow;
+        padding: 1rem 0.5rem;
+        svg{
+          background-color: #F5FBFF;
+          width: 30px;
+          height: 30px;
+          padding: 7px;
+          border-radius: 50px;
+          float: right;
+          margin-left: 8px;
+        }
+        a{
+          color: $secondary;
+          font-size: 10px;
+          float: left;
+        }
+      }
+    }
+    .about__icons {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      gap:35px;
+      @include shadow;
+      padding: 0.5rem;
+      a{
+        background-color: #F5FBFF;
+        border-radius: 50px;
+        width: 32px;
+        height: 32px;
+        svg{
+          right: 8px;
+          position:relative;
+     width: 16px;
+
+        }
+      }
+  }
+  @include labtop {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+}
 }

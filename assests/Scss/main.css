@@ -31,10 +31,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-html,
-body {
   font-family: YekanBakh, Arial !important;
 }
 
@@ -46,90 +42,148 @@ a {
   text-decoration: none;
 }
 
+#header .navbar__btn--dropdown .dropdown, #header .navbar__btn--dropdown {
+  transition: all 0.25s ease-out;
+}
+
+#header .navbar__btn, #header .navbar {
+  display: flex;
+  align-items: center;
+}
+
 #header {
-  margin: 0 auto;
-  max-width: 1200px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0 1rem 0;
 }
-#header .nav__right {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #header {
+    margin: 0;
+  }
 }
-#header .nav__right .nav__list {
-  display: flex;
-  align-items: center;
-  gap: 72px;
+#header .navbar {
+  justify-content: space-around;
+  padding: 0.5rem;
+  position: relative;
 }
-#header .nav__right .nav__list ul li {
-  display: inline-block;
-  margin: 0 1rem;
-}
-#header .nav__right .nav__list ul li:first-child {
+#header .navbar__menu--logo {
   color: #191C1E;
   font-size: 20px;
   font-weight: bold;
+  margin-left: 1.5rem;
 }
-#header .nav__right .nav__list ul li a {
-  color: #323233;
-}
-#header .nav__right .nav__list ul li a .active, #header .nav__right .nav__list ul li a:hover {
-  color: #2C7EF8;
-}
-#header .nav__left {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-}
-#header .nav__left .nav__btn {
-  background-color: #2C7EF8;
-  border: 1px solid #2C7EF8;
-  border-radius: 5px;
-  padding: 0.5rem 2rem;
-}
-#header .nav__left .nav__btn:hover {
-  background-color: #FFFFFF;
-  border: 1px solid #2C7EF8;
-}
-#header .nav__left .nav__btn:hover a {
-  color: #2C7EF8;
-}
-#header .nav__left .nav__btn a {
-  color: #FFFFFF;
+#header .navbar__menu--links {
+  color: #646466;
   font-size: 16px;
+  padding: 0 1.5rem;
 }
-#header .nav__left .nav__dropdown {
+#header .navbar__menu--links:hover {
+  color: #075CD9;
+}
+#header .navbar__menu--links:active {
+  color: #2C7EF8;
+}
+#header .navbar__hamburger {
+  display: none;
+}
+#header .navbar__btn {
+  justify-content: center;
+}
+#header .navbar__btn--signin {
+  margin-left: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #2C7EF8;
+  border-radius: 5px;
+}
+#header .navbar__btn--signin a {
+  font-size: 15px;
+  color: #FFFFFF;
+}
+#header .navbar__btn--dropdown {
+  cursor: pointer;
   position: relative;
-  display: inline-block;
-}
-#header .nav__left .nav__dropdown-btn {
-  background-color: #FFFFFF;
+  padding: 0.75rem 0.75rem 0;
   border: 1px solid #C8C7CB;
   border-radius: 5px;
-  padding: 10px 10px 0 8px;
-  cursor: pointer;
 }
-#header .nav__left .nav__dropdown-content {
-  display: none;
+#header .navbar__btn--dropdown .dropdown {
   position: absolute;
-  background-color: #f1f1f1;
+  top: 40px;
+  left: 0;
+  text-align: left;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  border-radius: 4px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+  background: #f1f1f1;
+  padding: 5px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
 }
-#header .nav__left .nav__dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+#header .navbar__btn--dropdown .dropdown a {
   display: block;
+  font-size: 14px;
+  line-height: 30px;
+  padding: 0 20px;
 }
-#header .nav__left .nav__dropdown-content a :hover {
-  background-color: #FFFFFF;
+#header .navbar__btn--dropdown .dropdown a:hover {
+  color: #e7e7e7;
 }
-#header .nav__left .nav__dropdown .show {
-  display: block;
+#header .navbar__btn--dropdown.is-open .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #header .navbar {
+    justify-content: flex-start;
+    gap: 130px;
+    box-shadow: 0px 2px 10px 1px rgba(24, 72, 144, 0.062745098);
+  }
+  #header .navbar__menu--links {
+    display: none;
+  }
+  #header .navbar__hamburger {
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+  #header .navbar__hamburger--bar {
+    height: 2px;
+    width: 27px;
+    background-color: #191C1E;
+    margin: 0.5rem 0;
+    opacity: 0.8;
+  }
+  #header .navbar__btn {
+    display: none;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #header .navbar {
+    justify-content: space-between;
+  }
+  #header .navbar__menu--links {
+    display: none;
+  }
+  #header .navbar__hamburger {
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+  #header .navbar__hamburger--bar {
+    height: 2px;
+    width: 27px;
+    background-color: #191C1E;
+    margin: 0.5rem 0;
+    opacity: 0.8;
+  }
+  #header .navbar__btn {
+    display: none;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #header .navbar {
+    margin: 0 1.5rem;
+  }
 }
 
 main {
@@ -141,16 +195,15 @@ main {
 #aboutUs {
   margin: 0 auto;
   max-width: 1024px;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 4rem 0 4rem 0;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   gap: 32px;
   background: #FFFFFF;
-  border: 1px solid #f5f6f8;
+  border: 1px solid #ebebeb;
   box-shadow: 0px 0px 30px 6px rgba(0, 0, 0, 0.03);
-  border-radius: 24px;
+  border-radius: 16px;
   padding: 2vw;
 }
 #aboutUs .right__panel {
@@ -182,16 +235,25 @@ main {
 #aboutUs .right__panel .panel__icon a {
   padding: 0.5rem;
 }
-#aboutUs .left__panel .name__wrapper, #aboutUs .left__panel .email__wrapper, #aboutUs .left__panel .phone__wrapper, #aboutUs .left__panel .message__wrapper {
+#aboutUs .left__panel .name__wrapper,
+#aboutUs .left__panel .email__wrapper,
+#aboutUs .left__panel .phone__wrapper,
+#aboutUs .left__panel .message__wrapper {
   margin-bottom: 1rem;
 }
-#aboutUs .left__panel .name__wrapper label, #aboutUs .left__panel .email__wrapper label, #aboutUs .left__panel .phone__wrapper label, #aboutUs .left__panel .message__wrapper label {
+#aboutUs .left__panel .name__wrapper label,
+#aboutUs .left__panel .email__wrapper label,
+#aboutUs .left__panel .phone__wrapper label,
+#aboutUs .left__panel .message__wrapper label {
   font-size: 16px;
 }
 #aboutUs .left__panel .name__wrapper input,
-#aboutUs .left__panel .name__wrapper textarea, #aboutUs .left__panel .email__wrapper input,
-#aboutUs .left__panel .email__wrapper textarea, #aboutUs .left__panel .phone__wrapper input,
-#aboutUs .left__panel .phone__wrapper textarea, #aboutUs .left__panel .message__wrapper input,
+#aboutUs .left__panel .name__wrapper textarea,
+#aboutUs .left__panel .email__wrapper input,
+#aboutUs .left__panel .email__wrapper textarea,
+#aboutUs .left__panel .phone__wrapper input,
+#aboutUs .left__panel .phone__wrapper textarea,
+#aboutUs .left__panel .message__wrapper input,
 #aboutUs .left__panel .message__wrapper textarea {
   width: 100%;
   margin-top: 10px;
@@ -205,9 +267,12 @@ main {
   color: #C8C7CB;
 }
 #aboutUs .left__panel .name__wrapper input ::placeholder,
-#aboutUs .left__panel .name__wrapper textarea ::placeholder, #aboutUs .left__panel .email__wrapper input ::placeholder,
-#aboutUs .left__panel .email__wrapper textarea ::placeholder, #aboutUs .left__panel .phone__wrapper input ::placeholder,
-#aboutUs .left__panel .phone__wrapper textarea ::placeholder, #aboutUs .left__panel .message__wrapper input ::placeholder,
+#aboutUs .left__panel .name__wrapper textarea ::placeholder,
+#aboutUs .left__panel .email__wrapper input ::placeholder,
+#aboutUs .left__panel .email__wrapper textarea ::placeholder,
+#aboutUs .left__panel .phone__wrapper input ::placeholder,
+#aboutUs .left__panel .phone__wrapper textarea ::placeholder,
+#aboutUs .left__panel .message__wrapper input ::placeholder,
 #aboutUs .left__panel .message__wrapper textarea ::placeholder {
   font-family: YekanBakh;
   font-size: 70px;
@@ -233,37 +298,179 @@ main {
   background-color: #075CD9;
   border-color: #075CD9;
 }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #aboutUs {
+    display: none;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #aboutUs {
+    display: none;
+  }
+}
+
+#mAboutUs {
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+}
+#mAboutUs .mAboutUs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+}
+#mAboutUs .mAboutUs h2,
+#mAboutUs .mAboutUs p {
+  text-align: center;
+}
+#mAboutUs .mAboutUs p {
+  font-size: 14px;
+}
+#mAboutUs .mAboutUs form {
+  border: 1px solid #ebebeb;
+  box-shadow: 0px 0px 30px 6px rgba(0, 0, 0, 0.03);
+  border-radius: 16px;
+  padding: 1rem;
+}
+#mAboutUs .mAboutUs form .name__wrapper,
+#mAboutUs .mAboutUs form .email__wrapper,
+#mAboutUs .mAboutUs form .phone__wrapper,
+#mAboutUs .mAboutUs form .message__wrapper {
+  margin-bottom: 0.5rem;
+}
+#mAboutUs .mAboutUs form .name__wrapper label,
+#mAboutUs .mAboutUs form .email__wrapper label,
+#mAboutUs .mAboutUs form .phone__wrapper label,
+#mAboutUs .mAboutUs form .message__wrapper label {
+  font-size: 12px;
+}
+#mAboutUs .mAboutUs form .name__wrapper input,
+#mAboutUs .mAboutUs form .name__wrapper textarea,
+#mAboutUs .mAboutUs form .email__wrapper input,
+#mAboutUs .mAboutUs form .email__wrapper textarea,
+#mAboutUs .mAboutUs form .phone__wrapper input,
+#mAboutUs .mAboutUs form .phone__wrapper textarea,
+#mAboutUs .mAboutUs form .message__wrapper input,
+#mAboutUs .mAboutUs form .message__wrapper textarea {
+  width: 100%;
+  margin-top: 5px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #C8C7CB;
+}
+#mAboutUs .mAboutUs form .name__wrapper input ::-moz-placeholder, #mAboutUs .mAboutUs form .name__wrapper textarea ::-moz-placeholder, #mAboutUs .mAboutUs form .email__wrapper input ::-moz-placeholder, #mAboutUs .mAboutUs form .email__wrapper textarea ::-moz-placeholder, #mAboutUs .mAboutUs form .phone__wrapper input ::-moz-placeholder, #mAboutUs .mAboutUs form .phone__wrapper textarea ::-moz-placeholder, #mAboutUs .mAboutUs form .message__wrapper input ::-moz-placeholder, #mAboutUs .mAboutUs form .message__wrapper textarea ::-moz-placeholder {
+  font-family: YekanBakh;
+  font-size: 7px;
+  color: #C8C7CB;
+}
+#mAboutUs .mAboutUs form .name__wrapper input ::placeholder,
+#mAboutUs .mAboutUs form .name__wrapper textarea ::placeholder,
+#mAboutUs .mAboutUs form .email__wrapper input ::placeholder,
+#mAboutUs .mAboutUs form .email__wrapper textarea ::placeholder,
+#mAboutUs .mAboutUs form .phone__wrapper input ::placeholder,
+#mAboutUs .mAboutUs form .phone__wrapper textarea ::placeholder,
+#mAboutUs .mAboutUs form .message__wrapper input ::placeholder,
+#mAboutUs .mAboutUs form .message__wrapper textarea ::placeholder {
+  font-family: YekanBakh;
+  font-size: 7px;
+  color: #C8C7CB;
+}
+#mAboutUs .mAboutUs form .name__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+}
+#mAboutUs .mAboutUs form .button {
+  width: 100%;
+  cursor: pointer;
+  background-color: #2C7EF8;
+  border-radius: 0.25rem;
+  border: 1px solid #2C7EF8;
+  color: #fff;
+  font-size: 15px;
+  line-height: 45px;
+  text-align: center;
+}
+#mAboutUs .mAboutUs form .button :hover {
+  background-color: #075CD9;
+  border-color: #075CD9;
+}
+#mAboutUs .mAboutUs .about__info {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 8px;
+}
+#mAboutUs .mAboutUs .about__info--call, #mAboutUs .mAboutUs .about__info--email {
+  border: 1px solid #ebebeb;
+  box-shadow: 0px 0px 30px 6px rgba(0, 0, 0, 0.03);
+  border-radius: 16px;
+  padding: 1rem 0.5rem;
+}
+#mAboutUs .mAboutUs .about__info--call svg, #mAboutUs .mAboutUs .about__info--email svg {
+  background-color: #F5FBFF;
+  width: 30px;
+  height: 30px;
+  padding: 7px;
+  border-radius: 50px;
+  float: right;
+  margin-left: 8px;
+}
+#mAboutUs .mAboutUs .about__info--call a, #mAboutUs .mAboutUs .about__info--email a {
+  color: #191C1E;
+  font-size: 10px;
+  float: left;
+}
+#mAboutUs .mAboutUs .about__icons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 35px;
+  border: 1px solid #ebebeb;
+  box-shadow: 0px 0px 30px 6px rgba(0, 0, 0, 0.03);
+  border-radius: 16px;
+  padding: 0.5rem;
+}
+#mAboutUs .mAboutUs .about__icons a {
+  background-color: #F5FBFF;
+  border-radius: 50px;
+  width: 32px;
+  height: 32px;
+}
+#mAboutUs .mAboutUs .about__icons a svg {
+  right: 8px;
+  position: relative;
+  width: 16px;
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #mAboutUs .mAboutUs {
+    display: none;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #mAboutUs .mAboutUs {
+    display: none;
+  }
+}
 
 #footer {
   margin: 0 auto;
   max-width: 1200px;
   padding: 0.5rem 0;
 }
-#footer h3 .hrlines {
-  position: relative;
-  max-width: 500px;
-  margin: 100px auto;
-  text-align: center;
+#footer .footer__titr {
+  display: flex;
+  align-items: center;
+  margin: 0 15rem 3rem 15rem;
 }
-#footer h3 .hrlines:before {
-  content: "";
-  display: block;
-  width: 2px;
-  background-color: black;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
+#footer .footer__titr h3 {
+  padding: 0 1rem;
 }
-#footer h3 .hrlines:after {
-  content: "";
-  display: block;
-  width: 2px;
-  background-color: black;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
+#footer .footer__titr--line {
+  height: 1px;
+  flex: 1;
+  background-color: #C8C7CB;
 }
 #footer .footer__widget {
   display: flex;
@@ -273,16 +480,19 @@ main {
 }
 #footer .footer__widget .widget__right {
   display: flex;
-  flex-direction: column;
-  width: 40%;
+  flex-direction: column-reverse;
+  width: 35%;
 }
+#footer .footer__widget .widget__right a,
 #footer .footer__widget .widget__right span {
-  font-size: 16px;
-  color: #323233;
+  display: flex;
+  gap: 10px;
   padding-bottom: 1rem;
+  font-size: 15px;
+  color: #191C1E;
 }
 #footer .footer__widget .widget__left {
-  width: 40%;
+  width: 35%;
 }
 #footer .footer__widget .widget__left h4 {
   padding-bottom: 0.75rem;
@@ -290,7 +500,7 @@ main {
 #footer .footer__widget .widget__left p {
   color: #323233;
 }
-#footer .footer__form {
+#footer .footer__widget .widget__left .widget__form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -300,25 +510,126 @@ main {
   border: 1px solid #7D7D7F;
   border-radius: 10px;
 }
-#footer .footer__form .form__input {
+#footer .footer__widget .widget__left .widget__form--input {
   border: none;
 }
-#footer .footer__form .form__input:palceholder {
+#footer .footer__widget .widget__left .widget__form--input:palceholder {
   font-size: 14px;
   color: #AFAEB2;
 }
-#footer .footer__form .form__btn {
+#footer .footer__widget .widget__left .widget__form--btn {
   background-color: #2C7EF8;
-  color: #FFFFFF;
   border-radius: 10px;
   padding: 10px 16px;
   font-size: 14px;
 }
-#footer .copyright p {
+#footer .copyright {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin: 3rem 15rem 0 15rem;
+}
+#footer .copyright p {
   color: #191C1E;
   font-size: 16px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #footer {
+    padding: 0.5rem 0.5rem;
+  }
+  #footer .footer__titr {
+    margin: 0 2rem 3rem 2rem;
+  }
+  #footer .footer__widget {
+    flex-direction: column;
+  }
+  #footer .footer__widget .widget__right {
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    order: 2;
+    margin: 2rem 0;
+  }
+  #footer .footer__widget .widget__right--mobile {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    width: 48%;
+  }
+  #footer .footer__widget .widget__right--mobile a {
+    border: 1px solid #ebebeb;
+    box-shadow: 0px 0px 30px 6px rgba(0, 0, 0, 0.03);
+    border-radius: 16px;
+    padding: 1rem 0.5rem;
+  }
+  #footer .footer__widget .widget__right span {
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ebebeb;
+    box-shadow: 0px 0px 30px 6px rgba(0, 0, 0, 0.03);
+    border-radius: 16px;
+    padding: 0.5rem 0.5rem;
+    width: 46%;
+  }
+  #footer .footer__widget .widget__left {
+    width: 100%;
+    order: 1;
+  }
+  #footer .footer__widget .widget__left .widget__form {
+    margin-top: 1rem;
+  }
+  #footer .copyright {
+    text-align: center;
+    margin: 0.5rem 0.5rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #footer {
+    padding: 0.5rem 0.5rem;
+  }
+  #footer .footer__titr {
+    margin: 0 2rem 3rem 2rem;
+  }
+  #footer .footer__widget {
+    flex-direction: column;
+  }
+  #footer .footer__widget .widget__right {
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    order: 2;
+    margin: 2rem 0;
+  }
+  #footer .footer__widget .widget__right--mobile {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    width: 48%;
+  }
+  #footer .footer__widget .widget__right--mobile a {
+    border: 1px solid #ebebeb;
+    box-shadow: 0px 0px 30px 6px rgba(0, 0, 0, 0.03);
+    border-radius: 16px;
+    padding: 1rem 0.5rem;
+  }
+  #footer .footer__widget .widget__right span {
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ebebeb;
+    box-shadow: 0px 0px 30px 6px rgba(0, 0, 0, 0.03);
+    border-radius: 16px;
+    padding: 0.5rem 0.5rem;
+    width: 46%;
+  }
+  #footer .footer__widget .widget__left {
+    width: 100%;
+    order: 1;
+  }
+  #footer .footer__widget .widget__left .widget__form {
+    margin-top: 1rem;
+  }
+  #footer .copyright {
+    text-align: center;
+    margin: 0.5rem 0.5rem;
+  }
 }/*# sourceMappingURL=main.css.map */

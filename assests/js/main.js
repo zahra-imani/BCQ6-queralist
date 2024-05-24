@@ -17,10 +17,9 @@ window.onclick = function (event) {
   }
 };
 
-
 //------ Menu Item Active-------
-var btnContainer = document.getElementById("mylist");
-var btns = btnContainer.getElementsByClassName("nav__items");
+var btnContainer = document.getElementById("mainmenu");
+var btns = btnContainer.getElementsByClassName("navbar__menu--links");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function () {
     var current = document.getElementsByClassName("active");
