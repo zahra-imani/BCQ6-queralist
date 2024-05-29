@@ -1,4 +1,4 @@
-#aboutUs {
+#contactUs {
   @include container;
   margin-top: 4rem 0 4rem 0;
   display: flex;
@@ -96,10 +96,10 @@
   }
 }
 
-#mAboutUs {
+#mcontactUs {
   margin-top: 1.5rem;
   padding: 0.5rem;
-  .mAboutUs {
+  .mcontactUs {
     display: flex;
     flex-direction: column;
     justify-content: center;

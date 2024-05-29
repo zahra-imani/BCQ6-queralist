@@ -1,0 +1,41 @@
+#contactus{
+    @include container;
+    margin-top: 4rem 0 4rem 0;
+    display: table;
+    justify-content: space-between;
+ align-items: flex-start;
+    
+    //position: relative;
+.content__panel{
+    flex-direction: column;
+    @include shadow;
+    width: 50%;
+}
+.profile__panel{
+    flex-direction: column;
+    width: 50%;
+    position: relative;
+    img{
+       overflow: hidden;
+       max-width: 100%;
+       height: auto;
+       border-radius: 30px
+    }
+    &--list{
+   
+        @include shadow;
+        display: grid;
+        gap:10px;
+        grid-template-columns: 230px 230px;
+        grid-template-rows: 112px 112px;
+        &--item{
+            background-color: #F5F5F5;
+
+        }
+    }
+    
+}
+
+
+
+}
