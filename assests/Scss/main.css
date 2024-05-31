@@ -471,19 +471,25 @@ a {
   top: 2.5rem;
 }
 
-.usercm {
+.container {
   margin: 0 auto;
   max-width: 1024px;
   display: grid;
-  padding: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
-.usercm__content {
-  margin-top: 6rem;
+.container .item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
 }
-.usercm__card {
-  display: grid;
+.container .pazel {
+  width: auto;
+  height: -moz-max-content;
+  height: max-content;
+}
+.container .hpazel {
+  margin-top: -75px;
 }
 
 #contactUs {

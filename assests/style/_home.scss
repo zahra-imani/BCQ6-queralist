@@ -189,18 +189,25 @@
     }
   }
 }
-.usercm{
+.container {
   @include container;
   display: grid;
-  padding: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 1rem;
-  &__content{
-    margin-top: 6rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  .item {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+   
   }
-
-  &__card{
-    display: grid;
-
+  .pazel{
+    width: auto;
+    height: max-content;
+  }
+  .hpazel{
+    margin-top: -75px;
   }
 }
+
+
+
