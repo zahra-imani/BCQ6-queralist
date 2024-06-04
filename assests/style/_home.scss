@@ -31,15 +31,18 @@
 
     &__tophead {
       margin-top: 6rem;
-      font-size: 34px;
+      font-size: 28px;
+      line-height: 40px;
       font-weight: Regular;
     }
     h1 {
       font-size: 46px;
+      line-height: 60px;
       font-weight: bold;
     }
     &__btmhead {
       font-size: 18px;
+      line-height: 32px;
       max-width: 800px;
       margin: 4rem 6rem 2rem 5rem;
       text-align: center;
@@ -69,7 +72,7 @@
   }
 }
 .app__banner {
-  margin-top: 6rem;
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,8 +81,7 @@
   height: auto;
 }
 .listFeatures {
-  position: relative;
-  z-index: -1;
+
   .features {
     margin-top: 5rem;
     display: flex;
@@ -88,7 +90,7 @@
     align-items: center;
     row-gap: 40px;
     position: relative;
-    z-index: 3;
+  
     &__content {
       z-index: 3;
       h2 {
@@ -123,28 +125,31 @@
       }
     }
   }
-  &__left,
-  &__right {
-    z-index: auto;
-    height: 27rem;
-    width: 27rem;
-    border-radius: 50%;
-    position: absolute;
-  }
-  &__left {
-    background: linear-gradient(180deg, #e0edff 0%, #ffffff 100%);
-    left: -70px;
-    top: 200px;
-  }
-  &__right {
-    background: linear-gradient(180deg, #efebff 0%, #ffffff 100%);
-    right: -100px;
-    top: 0;
-  }
+  // &__left,
+  // &__right {
+    
+  //   z-index: 1;
+  //   height: 27rem;
+  //   width: 27rem;
+  //   border-radius: 50%;
+  //   position: absolute;
+  // }
+  // &__left {
+  //  z-index: -1;
+  //   background: linear-gradient(180deg, #e0edff 0%, #ffffff 100%);
+  //   left: -70px;
+  //   top: 200px;
+  // }
+  // &__right {
+  //   background: linear-gradient(180deg, #efebff 0%, #ffffff 100%);
+  //   right: -100px;
+  //   top: 0;
+  // }
 }
 .downapp {
   @include container;
   margin-top: 8rem;
+  margin-bottom: 8rem;
   display: flex;
   flex-direction: row;
   align-items: stretch;

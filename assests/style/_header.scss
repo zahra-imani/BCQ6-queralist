@@ -57,7 +57,7 @@
       &--dropdown {
         cursor: pointer;
         position: relative;
-        padding: 0.75rem 0.75rem 0;
+        padding: 0.25rem 0.5rem;
         border: 1px solid $neutralAshGray;
         border-radius: 5px;
         @extend %dropdown-transition;
@@ -73,7 +73,7 @@
           background: #f1f1f1;
           padding: 5px 0;
           opacity: 0;
-          visibility: hidden;
+          display: none;
           -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
           @extend %dropdown-transition;
@@ -93,7 +93,7 @@
         &.is-open {
           .dropdown {
             opacity: 1;
-            visibility: visible;
+            display:block;
             -webkit-transform: translateY(0);
             transform: translateY(0);
           }

@@ -19,7 +19,7 @@ header.innerHTML =`
       
 
     <!-- navbar sign to application button -->
-    <button class="navbar__btn--signin"><a href="#">ورود به اپلیکیشن</a></button>
+    <button class="navbar__btn--signin"><a href="app.html">ورود به اپلیکیشن</a></button>
     <!-- website dark and light mode -->
     <button class="navbar__btn--dropdown  js-dropdown">
         <svg
