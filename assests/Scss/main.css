@@ -1478,7 +1478,6 @@ a {
   }
   .set {
     position: static;
-    max-width: 340px;
     width: auto;
   }
   #todolist .todolistbox__add button {
