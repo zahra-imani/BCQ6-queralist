@@ -109,8 +109,9 @@ line-height: 40px;
     &__content {
       z-index: 3;
       h2 {
-        font-size: 40px;
-        line-height: 72px;
+        font-size: 34px;
+        line-height: 62px;
+        text-align: center;
       }
       p {
         font-size: 18px;
@@ -303,6 +304,20 @@ line-height: 52px;
   }
   .different{
     margin-top: -100px;
+  }
+
+  @include mobile{
+    display: flex;
+    flex-direction: row;
+    width: 100000px;
+    overflow: hidden;
+    gap: 10px;
+    margin-bottom: 3rem;
+    &__item{
+      flex: 1 0 auto;
+        width: 300px;
+    }
+  
   }
 }
 

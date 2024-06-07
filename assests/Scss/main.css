@@ -391,8 +391,9 @@ a {
   z-index: 3;
 }
 .listFeatures .features__content h2 {
-  font-size: 40px;
-  line-height: 72px;
+  font-size: 34px;
+  line-height: 62px;
+  text-align: center;
 }
 .listFeatures .features__content p {
   font-size: 18px;
@@ -586,6 +587,20 @@ a {
 }
 .comments .different {
   margin-top: -100px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .comments {
+    display: flex;
+    flex-direction: row;
+    width: 100000px;
+    overflow: hidden;
+    gap: 10px;
+    margin-bottom: 3rem;
+  }
+  .comments__item {
+    flex: 1 0 auto;
+    width: 300px;
+  }
 }
 
 #contactUs {
@@ -1139,9 +1154,11 @@ a {
   padding: 1rem;
   transition: all 0.5s ease;
 }
+.appnav .mobilenav {
+  display: none;
+}
 .appnav__user {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 10px;
   margin-top: 1rem;
@@ -1170,7 +1187,6 @@ a {
 .appnav nav ul li a {
   color: gray;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 0.2rem;
   text-decoration: none;
@@ -1324,7 +1340,8 @@ a {
   justify-content: flex-end;
 }
 #todolist .todolistbox__addopen .bottom .error-message {
-  color: red;
+  font-size: 14px;
+  color: #E63946;
   display: none;
 }
 #todolist .todolistbox__addopen .bottom .addbtn {
@@ -1404,13 +1421,67 @@ a {
   background-color: #ffe2db;
   color: #ff5f37;
 }
-.incomplate__item--top i {
+.incomplate__item--top .bx-dots-vertical-rounded {
   position: absolute;
   left: 15px;
   font-size: 20px;
+}
+.incomplate__item--top .crud__box {
+  display: none;
+  gap: 10px;
+  position: absolute;
+  left: 24px;
+  top: 50px;
+  border: 1.5px solid rgb(238, 238, 238);
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgb(243, 243, 243);
+  padding: 0.5rem 0.75rem;
+}
+.incomplate__item--top .crud__box input {
+  display: none;
+}
+.incomplate__item--top .show {
+  display: flex;
 }
 .incomplate__item p {
   padding: 0.5rem 1.75rem;
   font-size: 14px;
   color: #7D7D7F;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .appnav {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    height: auto;
+    width: auto;
+    padding: 0;
+    box-shadow: none;
+  }
+  .appnav .mobilenav {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    position: static;
+    border: 1px solid #ebebeb;
+    box-shadow: 0px 0px 30px 6px rgba(0, 0, 0, 0.03);
+    border-radius: 16px;
+    border-radius: 8px;
+    padding: 0.5rem;
+  }
+  .appnav .mobilenav__icon i {
+    font-size: 24px;
+  }
+  .appnav nav {
+    display: none;
+  }
+  .set {
+    position: static;
+    max-width: 340px;
+    width: auto;
+  }
+  #todolist .todolistbox__add button {
+    width: 90%;
+  }
 }/*# sourceMappingURL=main.css.map */
