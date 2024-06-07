@@ -35,9 +35,4 @@
     margin: 0 auto;
     max-width: $screen-lg;
   }
-  @mixin circle{
-  height: 28.25rem;
-  width:28.25rem;
-  background: linear-gradient(180deg, #E0EDFF 0%, #ffffff 100%);
-  border-radius: 50%;
-  }
+ 

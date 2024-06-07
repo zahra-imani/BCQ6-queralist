@@ -21,6 +21,12 @@ time, mark, audio, video {
 body {
  line-height:1;
 }
+@media screen and (min-width:320px) and (max-width:480px){ 
+    body{
+        padding: 10px;
+    }
+} 
+
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section { 
  display:block;
